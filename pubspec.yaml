@@ -1,7 +1,8 @@
 name: interval_ticker_provider
 description: interval ticker provider
 version: 0.0.1
-homepage:
+homepage: https://www.haoshuo.com
+repository: https://github.com/HaoShuo-App/timer-ticket-provider
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
