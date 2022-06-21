@@ -33,12 +33,12 @@ void Function(Timer) callBack = (timer) {
   for (int i = 0; i < list.length; i++) {
     var key = list.elementAt(i).key;
     var value = list.elementAt(i).value;
-    if (SchedulerBinding.instance!.framesEnabled) {
+    if (SchedulerBinding.instance.framesEnabled) {
       key(Duration(
           milliseconds: DateTime.now().millisecondsSinceEpoch -
               value._tickerStartTime!.millisecondsSinceEpoch));
     } else {
-      SchedulerBinding.instance!.addPostFrameCallback((timeStamp) {
+      SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
         if (value.isActive) {
           value.scheduleTick(rescheduling: true);
         }
